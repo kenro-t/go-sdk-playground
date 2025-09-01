@@ -1,0 +1,26 @@
+{
+	"workspaceFolder": "/app",
+	"name": "devcontainer",
+	"build": {
+		"dockerfile": "./Dockerfile"
+	},
+	"features": {},
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go",
+				"streetsidesoftware.code-spell-checker",
+				"eamodio.gitlens",
+				"ms-azuretools.vscode-docker",
+				"esbenp.prettier-vscode",
+				"redhat.vscode-yaml",
+				"github.copilot",
+				"typespec.typespec-vscode"
+			]
+		}
+	}
+}
